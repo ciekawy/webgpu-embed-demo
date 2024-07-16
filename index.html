@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <textarea id="bulk-input" rows="10" cols="50" placeholder="Paste your text here..."></textarea>
+<button onclick="processBulkInput()">Process Bulk Input</button><br>
+      <input type="text" id="new-item" placeholder="Add a new item" onkeyup="findSimilarItems()" />
+      <button onclick="addItem()">Add</button>
+      <button onclick="resetItems()">Reset</button>
+      <h3>Similar Items</h3>
+      <ul id="similar-items"></ul>
+      <h3>Items</h3>
+      <ul id="item-list"></ul>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
