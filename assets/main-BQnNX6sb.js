@@ -26591,6 +26591,7 @@ apis.IS_PROCESS_AVAILABLE ? (x) => process.stdout.write(x) : (x) => console.log(
 let extractor = null;
 let isExtractionRunning = false;
 env.backends.onnx.backend = "wasm";
+env.backends.onnx.wasm.proxy = false;
 env.backends.onnx.wasm.numThreads = 1;
 env.backends.onnx.wasm.simd = true;
 env.backends.onnx.wasm.wasmPaths = "http://localhost:5173/node_modules/@xenova/transformers/dist/";
