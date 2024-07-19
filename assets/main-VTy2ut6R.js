@@ -26594,7 +26594,7 @@ env.backends.onnx.backend = "wasm";
 env.backends.onnx.wasm.proxy = false;
 env.backends.onnx.wasm.numThreads = 1;
 env.backends.onnx.wasm.simd = true;
-env.backends.onnx.wasm.wasmPaths = "/assets/";
+env.backends.onnx.wasm.wasmPaths = "/webgpu-embed-demo/assets/";
 env.allowLocalModels = true;
 env.allowRemoteModels = true;
 async function loadExtractor() {
