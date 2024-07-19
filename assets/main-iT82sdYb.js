@@ -3210,7 +3210,7 @@ var Wn, Ta, lp, Ea = U(() => {
       } catch (f) {
         F(`Module.instantiateWasm callback failed with error: ${f}`), m(f);
       }
-      return Ao || (Ao = u.locateFile ? Eo("ort-wasm-simd-threaded.jsep.wasm") ? "ort-wasm-simd-threaded.jsep.wasm" : u.locateFile ? u.locateFile("ort-wasm-simd-threaded.jsep.wasm", z) : z + "ort-wasm-simd-threaded.jsep.wasm" : new URL("/webgpu-embed-demo/assets/ort-wasm-simd-threaded.jsep-CzpSmffv.wasm", import.meta.url).href), function(f, y) {
+      return Ao || (Ao = u.locateFile ? Eo("ort-wasm-simd-threaded.jsep.wasm") ? "ort-wasm-simd-threaded.jsep.wasm" : u.locateFile ? u.locateFile("ort-wasm-simd-threaded.jsep.wasm", z) : z + "ort-wasm-simd-threaded.jsep.wasm" : new URL("/webgpu-embed-demo/assets/ort-wasm-simd-threaded.jsep.wasm", import.meta.url).href), function(f, y) {
         var v = Ao;
         return typeof WebAssembly.instantiateStreaming != "function" || Eo(v) || ko(v) || typeof fetch != "function" ? Oo(v, f, y) : fetch(v, { credentials: "same-origin" }).then((C) => WebAssembly.instantiateStreaming(C, f).then(y, function(O) {
           return F(`wasm streaming compile failed: ${O}`), F("falling back to ArrayBuffer instantiation"), Oo(v, f, y);
@@ -26594,7 +26594,7 @@ env.backends.onnx.backend = "wasm";
 env.backends.onnx.wasm.proxy = false;
 env.backends.onnx.wasm.numThreads = 1;
 env.backends.onnx.wasm.simd = true;
-env.backends.onnx.wasm.wasmPaths = "http://localhost:5173/node_modules/@xenova/transformers/dist/";
+env.backends.onnx.wasm.wasmPaths = "/assets/";
 env.allowLocalModels = true;
 env.allowRemoteModels = true;
 async function loadExtractor() {
