@@ -26766,12 +26766,12 @@ function debounce(func, wait) {
     timeout = window.setTimeout(() => func.apply(this, args), wait);
   };
 }
-function updateProgressBar(progress) {
+function updateProgressBar({ progress }) {
   console.log("Progress:", progress);
   document.getElementById("progress-bar").style.width = `${progress}%`;
 }
 function completeProgress() {
-  updateProgressBar(100);
+  updateProgressBar({ progress: 100 });
   setTimeout(() => {
     document.getElementById("progress-container").style.display = "none";
   }, 500);
