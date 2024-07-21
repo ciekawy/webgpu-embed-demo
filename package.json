@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "jsdom": "^24.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.2.2",

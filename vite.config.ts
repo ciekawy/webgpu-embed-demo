@@ -4,21 +4,30 @@ import topLevelAwait from 'vite-plugin-top-level-await';
 import wasm from 'vite-plugin-wasm';
 
 export default defineConfig({
+    base: '/webgpu-embed-demo/',
     build: {
+      outDir: 'dist',
       minify: false,
       rollupOptions: {
         input: {
           main: 'index.html',
-          sw: 'sw.ts'
+          // sw: 'sw.ts'
         },
         output: {
-          entryFileNames: (chunk) => {
-            if (chunk.name === 'sw') {
-              return 'sw.js';
+          assetFileNames: (assetInfo) => {
+            if (assetInfo.name?.endsWith('.wasm')) {
+              return 'assets/[name][extname]';
             }
-            return '[name].[hash].js';
+            return 'assets/[name].[hash][extname]';
           }
         }
+        //   entryFileNames: (chunk) => {
+        //     if (chunk.name === 'sw') {
+        //       return 'sw.js';
+        //     }
+        //     return '[name].[hash].js';
+        //   }
+        // }
       }
     },
     optimizeDeps: {
