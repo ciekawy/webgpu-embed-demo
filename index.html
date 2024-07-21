@@ -1,23 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/webgpu-embed-demo/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/webgpu-embed-demo/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vite + TS</title>
-    <script type="module" crossorigin src="/webgpu-embed-demo/assets/main-CiDqZTCm.js"></script>
-  </head>
-  <body>
-    <div id="app">
-      <textarea id="bulk-input" rows="10" cols="50" placeholder="Paste your text here..."></textarea>
-<button onclick="processBulkInput()">Process Bulk Input</button> <button onclick="processBulkInput(true)">Load demo</button><br>
-      <input type="text" id="new-item" placeholder="Add a new item" onkeyup="findSimilarItems()" />
-      <button onclick="addItem()">Add</button>
-      <button onclick="resetItems()">Reset</button>
-      <h3>Similar Items</h3>
-      <ul id="similar-items"></ul>
-      <h3>Items</h3>
-      <ul id="item-list"></ul>
+    <style>
+        #progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+        }
+
+        #progress-bar {
+            width: 0;
+            height: 30px;
+            background-color: #4caf50;
+        }
+    </style>
+  <script type="module" crossorigin src="/webgpu-embed-demo/assets/main-BU9PuRWj.js"></script>
+</head>
+<body>
+<div id="app">
+    <div id="progress-container">
+        <div id="progress-bar"></div>
     </div>
-  </body>
+    <textarea id="bulk-input" rows="10" cols="50" placeholder="Paste your text here..."></textarea>
+    <button onclick="processBulkInput()">Process Bulk Input</button>
+    <button onclick="processBulkInput(true)">Load demo</button>
+    <br>
+    <input type="text" id="new-item" placeholder="Add a new item" onkeyup="findSimilarItems()"/>
+    <button onclick="addItem()">Add</button>
+    <button onclick="resetItems()">Reset</button>
+    <h3>Similar Items</h3>
+    <ul id="similar-items"></ul>
+    <h3>Items</h3>
+    <ul id="item-list"></ul>
+</div>
+</body>
 </html>

@@ -26597,10 +26597,11 @@ env.backends.onnx.wasm.simd = navigator.maxTouchPoints <= 1;
 env.backends.onnx.wasm.wasmPaths = "/webgpu-embed-demo/assets/";
 env.allowLocalModels = true;
 env.allowRemoteModels = true;
-async function loadExtractor() {
+async function loadExtractor(progress_callback) {
   if (!extractor) {
     console.log("Loading extractor...");
     extractor = await pipeline("feature-extraction", "Xenova/bge-m3", {
+      progress_callback,
       session_options: {
         executionProviders: [
           "wasm"
@@ -26765,9 +26766,19 @@ function debounce(func, wait) {
     timeout = window.setTimeout(() => func.apply(this, args), wait);
   };
 }
+function updateProgressBar(progress) {
+  document.getElementById("progress-bar").style.width = `${progress}%`;
+}
+function completeProgress() {
+  updateProgressBar(100);
+  setTimeout(() => {
+    document.getElementById("progress-container").style.display = "none";
+  }, 500);
+}
 if (window !== void 0) {
   window.onload = async () => {
-    await loadExtractor();
+    await loadExtractor(updateProgressBar);
+    completeProgress();
     updateItemList();
   };
   window.addItem = addItem;
