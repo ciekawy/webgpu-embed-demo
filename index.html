@@ -31,7 +31,12 @@
         privacy. The model operates entirely on the client side, avoiding any data transmission to external servers.
     </p>
     <p>
-        The implementation uses the <code>xenova/transformers.js</code> and <code>onnxruntime-web</code> packages with a
+        Results are not ideal but are good enough for many use cases. I started this after taking many notes on some
+        broad topic and was not sure if some thought was already touched on previously. The original version was
+        implemented in Python, but later I got interested in seeing how it can be done in the browser.
+    </p>
+    <p>
+        The implementation uses the <code>@xenova/transformers</code> (Transformers JS) and <code>onnxruntime-web</code> packages with a
         BGE-M3 model that is 570MB in size after being 8-bit quantized.
     </p>
     <p>
