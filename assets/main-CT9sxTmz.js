@@ -26634,74 +26634,12 @@ async function computeEmbedding(text) {
     isExtractionRunning = false;
   }
 }
-const demoText = `
-- Digital minimalism can enhance productivity by reducing distractions. Tim Ferriss advocates for focused work intervals, which can be particularly effective when combined with tools like the Pomodoro Technique.
-- W podr\xF3\u017Cy do Japonii warto odwiedzi\u0107 Kioto, gdzie wiosn\u0105 mo\u017Cna podziwia\u0107 spektakularne kwitnienie wi\u015Bni, znane jako hanami.
-- Cooking with fresh herbs like basil and thyme can elevate simple dishes; Ottolenghi's recipes often highlight the importance of these ingredients for flavor complexity.
-- The concept of "Ikigai" from Japanese culture emphasizes finding a balance between passion, mission, vocation, and profession for a fulfilling life.
-- Rozw\xF3j osobisty cz\u0119sto wymaga konsekwentnego wprowadzania ma\u0142ych zmian, jak codzienne medytacje lub pisanie dziennika, co mo\u017Ce przynie\u015B\u0107 d\u0142ugoterminowe korzy\u015Bci.
-- Integrating AI into healthcare can revolutionize patient care; for instance, IBM's Watson is being used to aid in diagnosing diseases and personalizing treatment plans.
-- Culinary techniques like sous-vide allow for precise temperature control, ensuring perfectly cooked meats and vegetables every time.
-- Exploring the history of ancient civilizations, such as the Inca Empire and its engineering marvels like Machu Picchu, provides insights into human innovation.
-- Zachowanie r\xF3wnowagi mi\u0119dzy \u017Cyciem zawodowym a prywatnym mo\u017Ce by\u0107 wspomagane przez techniki takie jak mindfulness, promowane przez autor\xF3w takich jak Jon Kabat-Zinn.
-- The rapid development of quantum computing, led by companies like Google and IBM, promises to solve complex problems that are currently intractable with classical computers.
-- Baking bread at home can be both therapeutic and rewarding; using sourdough starter from Tartine Bakery's method brings out complex flavors and textures.
-- Visiting Iceland offers unique experiences such as bathing in the Blue Lagoon and witnessing the Northern Lights, creating unforgettable memories.
-- Samorealizacja mo\u017Ce by\u0107 osi\u0105gni\u0119ta przez ci\u0105g\u0142e stawianie sobie wyzwa\u0144 i nauk\u0119 nowych umiej\u0119tno\u015Bci, jak zaleca Tony Robbins w swoich seminariach.
-- Renewable energy technologies, like Tesla's solar roof tiles, are making sustainable living more accessible and practical for homeowners.
-- In Italian cuisine, the simplicity of dishes like cacio e pepe highlights the importance of quality ingredients and traditional techniques.
-- Podr\xF3\u017Cuj\u0105c po W\u0142oszech, warto odwiedzi\u0107 mniej znane regiony, takie jak Puglia, gdzie mo\u017Cna odkry\u0107 autentyczn\u0105 kultur\u0119 i kuchni\u0119 z dala od turystycznych szlak\xF3w.
-- Emotional intelligence, a concept popularized by Daniel Goleman, is crucial for building strong personal and professional relationships.
-- Blockchain technology, beyond cryptocurrencies, has the potential to revolutionize industries by providing secure, transparent transaction methods.
-- Fermentacja warzyw, np. kapusty na kiszonki, to metoda konserwacji jedzenia, kt\xF3ra jednocze\u015Bnie wzbogaca je o probiotyki, korzystne dla zdrowia jelit.
-- Experiencing local festivals, like the Holi festival in India, offers a deep dive into the cultural and social fabric of a country.
-- Personal branding, as suggested by experts like Gary Vaynerchuk, is essential in the digital age for career advancement and networking.
-- Advances in biotechnology, such as CRISPR gene editing, open new possibilities for treating genetic disorders and improving crop resilience.
-- Przygotowanie tradycyjnych da\u0144, takich jak polskie pierogi, mo\u017Ce by\u0107 doskona\u0142\u0105 okazj\u0105 do integracji rodzinnej i przekazywania kulinarnych tradycji.
-- Traveling through Southeast Asia provides a diverse culinary adventure, from street food in Bangkok to fine dining in Singapore.
-- Practicing gratitude daily, as recommended by positive psychology researchers like Martin Seligman, can significantly enhance overall well-being.
-- The Internet of Things (IoT) is transforming homes into smart environments, with devices like Amazon's Alexa providing seamless integration and control.
-- Uprawianie jogi, wed\u0142ug wskaz\xF3wek takich jak te od Adriene Mishler, mo\u017Ce pom\xF3c w redukcji stresu i poprawie elastyczno\u015Bci cia\u0142a.
-- Exploring the wine regions of France, such as Bordeaux and Burgundy, offers not only tasting experiences but also lessons in history and terroir.
-- Networking, both online and offline, is vital for professional growth; platforms like LinkedIn offer opportunities for global connections.
-- Sustainable fashion, promoted by brands like Patagonia, emphasizes the importance of ethical production and reducing environmental impact.
-- Mindfulness meditation, as taught by Thich Nhat Hanh, can help cultivate a sense of peace and presence in everyday life.
-- Przegl\u0105danie starych ksi\u0105\u017Cek kucharskich mo\u017Ce by\u0107 inspiracj\u0105 do odkrywania zapomnianych przepis\xF3w i technik kulinarnych.
-- Exploring the Arctic region offers a unique perspective on climate change, as seen through the melting glaciers and shifting ecosystems.
-- The philosophy of Stoicism, with texts by Marcus Aurelius and Seneca, provides practical wisdom for handling life's challenges.
-- Gotowanie z u\u017Cyciem lokalnych sk\u0142adnik\xF3w, takich jak w kuchni farm-to-table, promowanej przez restauracje jak Blue Hill, wspiera lokalne rolnictwo i zr\xF3wnowa\u017Cony rozw\xF3j.
-- Experiencing the vibrant street art scene in cities like Berlin can reveal a city's social and political narratives.
-- Developing a growth mindset, as described by Carol Dweck, encourages resilience and a love of learning.
-- Wizyta w ma\u0142ych winnicach w regionie Toskanii pozwala na odkrycie unikalnych smak\xF3w i historii zwi\u0105zanych z produkcj\u0105 wina.
-- The rise of telemedicine, accelerated by the COVID-19 pandemic, is making healthcare more accessible and convenient.
-- Cooking with seasonal ingredients, as highlighted in Alice Waters' cookbooks, brings out the best flavors and supports local farmers.
-- Exploring the architectural wonders of Antoni Gaud\xED in Barcelona offers a glimpse into innovative and organic design.
-- Regular physical activity, like the high-intensity interval training (HIIT) popularized by Joe Wicks, is crucial for maintaining health and fitness.
-- Fermentowanie w\u0142asnych napoj\xF3w, jak kombucha, mo\u017Ce by\u0107 fascynuj\u0105cym hobby, a tak\u017Ce \u017Ar\xF3d\u0142em zdrowych probiotyk\xF3w.
-- The concept of slow travel emphasizes immersing oneself in a destination rather than rushing through tourist spots.
-- Developing critical thinking skills, as advocated by Edward de Bono, is essential for problem-solving and innovation.
-- In the tech world, understanding blockchain's potential beyond cryptocurrency, such as in supply chain management, is becoming increasingly important.
-- Odkrywanie regionalnych kuchni, jak kuchnia Meksyku z jej bogat\u0105 palet\u0105 smak\xF3w i technik, mo\u017Ce by\u0107 kulinarn\u0105 podr\xF3\u017C\u0105 do innego \u015Bwiata.
-- Practicing minimalism, inspired by Marie Kondo, can lead to a more organized and fulfilling life by focusing on what truly matters.
-- Renewable energy solutions, like offshore wind farms developed by companies such as \xD8rsted, are crucial for combating climate change.
-- Experimenting with fusion cuisine, combining elements from different culinary traditions, can result in innovative and exciting dishes.
-- Learning a new language, such as using apps like Duolingo, can open doors to different cultures and enhance cognitive abilities.
-- The trend of urban farming, supported by initiatives like rooftop gardens, promotes sustainability and fresh produce in city environments.
-- Discovering hidden gems in travel, like the quaint villages of the Cotswolds, offers a peaceful retreat from bustling tourist spots.
-- Practicing empathy, as suggested by Brene Brown, strengthens personal relationships and fosters a supportive community.
-- Advances in artificial intelligence, particularly in natural language processing, are revolutionizing how we interact with technology.
-- Robienie w\u0142asnych kosmetyk\xF3w, jak balsamy i myd\u0142a, pozwala na kontrolowanie sk\u0142adnik\xF3w i dbanie o sk\xF3r\u0119 w naturalny spos\xF3b.
-- The rise of digital nomadism, facilitated by remote work technology, allows for a lifestyle combining work and travel.
-- Developing a habit of daily reading, inspired by leaders like Warren Buffett, can significantly broaden one's knowledge and perspective.
-- Exploring national parks, such as Yellowstone and Yosemite, provides a connection to nature and an appreciation for conservation efforts.
-- Learning about permaculture, a sustainable agricultural practice promoted by Bill Mollison, can inspire eco-friendly gardening techniques.
-`;
 const items = loadItemsFromLocalStorage() || [];
 async function processBulkInput(demo = false) {
-  const bulkInputElement = document.getElementById("bulk-input");
   if (demo) {
-    bulkInputElement.value = demoText;
+    items.push(await fetch("demo-data.json").then((response) => response.json()));
   }
+  const bulkInputElement = document.getElementById("bulk-input");
   const bulkText = bulkInputElement.value;
   const processedItems = filterAndProcessLines(bulkText.split("\n"));
   bulkInputElement.disabled = true;
