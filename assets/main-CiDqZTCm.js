@@ -26637,7 +26637,7 @@ async function computeEmbedding(text) {
 const items = loadItemsFromLocalStorage() || [];
 async function processBulkInput(demo = false) {
   if (demo) {
-    items.push(await fetch("demo-data.json").then((response) => response.json()));
+    items.push(...await fetch("demo-data.json").then((response) => response.json()));
   }
   const bulkInputElement = document.getElementById("bulk-input");
   const bulkText = bulkInputElement.value;
