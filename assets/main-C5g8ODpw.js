@@ -26767,6 +26767,7 @@ function debounce(func, wait) {
   };
 }
 function updateProgressBar(progress) {
+  console.log("Progress:", progress);
   document.getElementById("progress-bar").style.width = `${progress}%`;
 }
 function completeProgress() {
