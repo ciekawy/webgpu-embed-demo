@@ -26778,8 +26778,10 @@ function completeProgress() {
 }
 if (window !== void 0) {
   window.onload = async () => {
+    document.getElementById("main").style.display = "none";
     await loadExtractor(updateProgressBar);
     completeProgress();
+    document.getElementById("main").style.display = "initial";
     updateItemList();
   };
   window.addItem = addItem;

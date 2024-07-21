@@ -17,24 +17,26 @@
             background-color: #4caf50;
         }
     </style>
-  <script type="module" crossorigin src="/webgpu-embed-demo/assets/main-C5g8ODpw.js"></script>
+  <script type="module" crossorigin src="/webgpu-embed-demo/assets/main-BfoqTqb6.js"></script>
 </head>
 <body>
 <div id="app">
     <div id="progress-container">
         <div id="progress-bar"></div>
     </div>
-    <textarea id="bulk-input" rows="10" cols="50" placeholder="Paste your text here..."></textarea>
-    <button onclick="processBulkInput()">Process Bulk Input</button>
-    <button onclick="processBulkInput(true)">Load demo</button>
-    <br>
-    <input type="text" id="new-item" placeholder="Add a new item" onkeyup="findSimilarItems()"/>
-    <button onclick="addItem()">Add</button>
-    <button onclick="resetItems()">Reset</button>
-    <h3>Similar Items</h3>
-    <ul id="similar-items"></ul>
-    <h3>Items</h3>
-    <ul id="item-list"></ul>
+    <div id="main">
+        <textarea id="bulk-input" rows="10" cols="50" placeholder="Paste your text here..."></textarea>
+        <button onclick="processBulkInput()">Process Bulk Input</button>
+        <button onclick="processBulkInput(true)">Load demo</button>
+        <br>
+        <input type="text" id="new-item" placeholder="Add a new item" onkeyup="findSimilarItems()"/>
+        <button onclick="addItem()">Add</button>
+        <button onclick="resetItems()">Reset</button>
+        <h3>Similar Items</h3>
+        <ul id="similar-items"></ul>
+        <h3>Items</h3>
+        <ul id="item-list"></ul>
+    </div>
 </div>
 </body>
 </html>
