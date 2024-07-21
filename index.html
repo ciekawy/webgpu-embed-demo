@@ -25,12 +25,12 @@
         <div id="progress-bar"></div>
     </div>
     <div id="main">
-        <textarea id="bulk-input" rows="10" cols="50" placeholder="Paste your text here..."></textarea>
+        <textarea id="bulk-input" rows="10" cols="50" placeholder="Paste your list of items here..."></textarea>
         <button onclick="processBulkInput()">Process Bulk Input</button>
         <button onclick="processBulkInput(true)">Load demo</button>
         <br>
-        <input type="text" id="new-item" placeholder="Add a new item" onkeyup="findSimilarItems()"/>
-        <button onclick="addItem()">Add</button>
+        <textarea type="text" id="new-item" placeholder="Add a new item" onkeyup="findSimilarItems()"></textarea>
+        <button onclick="addItem()">Add item</button>
         <button onclick="resetItems()">Reset</button>
         <h3>Similar Items</h3>
         <ul id="similar-items"></ul>
